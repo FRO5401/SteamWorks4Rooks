@@ -13,7 +13,7 @@ public class PopGerz extends Command {
 	
     public PopGerz(int inpoot) {
         // Use requires() here to declare subsystem dependencies
-        requires(Robot.gerz); 
+    	requires(Robot.gerz); 
         input = inpoot;
     }
 
@@ -28,7 +28,7 @@ public class PopGerz extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return true;
+        return false;
     }
 
     // Called once after isFinished returns true

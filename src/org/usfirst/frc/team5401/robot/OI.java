@@ -71,6 +71,8 @@ public class OI {
 		xboxX_Driver.whenPressed(new PopGerz(-1)); //out
 		xboxX_Driver.whenReleased(new PopGerz(1)); //in
 		
+		//xboxA_Driver.whenPressed(new GearManip());
+		
 		
 	}
 	

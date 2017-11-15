@@ -11,11 +11,11 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Gerz extends Subsystem {
 	
 	private DoubleSolenoid GerzBoi;
-	private DoubleSolenoid GerzBoiz;
+	//private DoubleSolenoid GerzBoiz;
 	
-	public void GerzMan(){
+	public Gerz(){
 		GerzBoi = new DoubleSolenoid(RobotMap.PCM_ID, RobotMap.GEAR_MANIPULATOR_IN, RobotMap.GEAR_MANIPULATOR_OUT);
-		GerzBoiz = new DoubleSolenoid(RobotMap.PCM_ID, RobotMap.GEAR_MANIPULATOR_IN, RobotMap.GEAR_MANIPULATOR_OUT);
+		//GerzBoiz = new DoubleSolenoid(RobotMap.PCM_ID, RobotMap.GEAR_MANIPULATOR_IN, RobotMap.GEAR_MANIPULATOR_OUT);
 
 		
 		
@@ -31,10 +31,13 @@ public class Gerz extends Subsystem {
     public void gearInOut(int axis){
     	    if (axis == 1) {
     	    	GerzBoi.set(DoubleSolenoid.Value.kForward);
-    	    	GerzBoi.set(DoubleSolenoid.Value.kForward);
+    	    //	GerzBoiz.set(DoubleSolenoid.Value.kForward);
     	    } else if (axis == -1) {
     	    	GerzBoi.set(DoubleSolenoid.Value.kReverse);
-    	    	GerzBoiz.set(DoubleSolenoid.Value.kReverse);
+    	    //	GerzBoiz.set(DoubleSolenoid.Value.kReverse);
+    	    } else {
+    	    	GerzBoi.set(DoubleSolenoid.Value.kOff);
+    	    //	GerzBoiz.set(DoubleSolenoid.Value.kOff);
     	    }
     }
 }
