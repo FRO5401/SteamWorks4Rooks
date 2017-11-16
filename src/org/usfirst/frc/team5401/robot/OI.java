@@ -68,9 +68,11 @@ public class OI {
 	//Buttons
 	public OI(){
 
-		xboxX_Driver.whenPressed(new PopGerz(-1)); //out
-		xboxX_Driver.whenReleased(new PopGerz(1)); //in
+		//xboxX_Driver.whenPressed(new PopGerz(-1)); //out
+		//xboxX_Driver.whenReleased(new PopGerz(1)); //in
+		//Will crash
 		
+		xboxY_Driver.whenPressed(new LoadShooterRook()); 
 		
 	}
 	

@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team5401.robot.commands.ExampleCommand;
 import org.usfirst.frc.team5401.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team5401.robot.subsystems.Gerz;
+import org.usfirst.frc.team5401.robot.subsystems.LoaderRook;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -23,8 +24,9 @@ public class Robot extends IterativeRobot {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static Gerz gerz;
+	public static LoaderRook loaderrook;
 	public static OI oi;
-
+	
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
 
@@ -35,6 +37,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		gerz = new Gerz();
+		loaderrook = new LoaderRook();
 		oi = new OI();
 		chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
